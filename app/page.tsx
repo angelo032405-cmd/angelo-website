@@ -4,23 +4,34 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="mx-auto max-w-3xl px-6 py-24 sm:py-32">
+      <section className="mx-auto max-w-4xl px-6 py-24 sm:py-32">
         <p className="mb-4 text-sm font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
           Hi, I'm
         </p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Your Name
+          Angelo Perez
         </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-          A short tagline about what you do — e.g. Designer, Developer, or
-          "Building things on the web."
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
+          Finance student at the University of Illinois (Gies Scholar) |
+          Real Estate Private Equity Intern at Project Destined | Greenwood
+          Project Scholar &apos;25. Passionate about wealth management, advisory,
+          and commercial banking—and increasing Latino representation in finance.
         </p>
-        <div className="mt-10 flex gap-4">
+        <p className="mt-4 text-base text-zinc-500 dark:text-zinc-500">
+          Actively seeking Summer 2026 internship opportunities in the Chicagoland area.
+        </p>
+        <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/about"
             className="rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
           >
-            About me
+            My story
+          </Link>
+          <Link
+            href="/experience"
+            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+          >
+            Experience
           </Link>
           <Link
             href="/#contact"
@@ -33,12 +44,16 @@ export default function Home() {
 
       {/* About teaser */}
       <section className="border-t border-zinc-200 dark:border-zinc-800">
-        <div className="mx-auto max-w-3xl px-6 py-20">
+        <div className="mx-auto max-w-4xl px-6 py-20">
           <h2 className="text-2xl font-semibold tracking-tight">About</h2>
           <p className="mt-4 max-w-2xl leading-relaxed text-zinc-600 dark:text-zinc-400">
-            A brief intro that shows up on the homepage. You can expand on this
-            on your About page — your background, what you're interested in, and
-            what you're up to now.
+            I'm a junior at Gies College of Business with an entrepreneurial
+            foundation from running my own sneaker resale venture. That experience
+            taught me how to understand markets, analyze trends, and build trust—and
+            it sparked a deeper interest in how money, value, and decision-making
+            shape lives and businesses. I'm drawn to client-facing roles where I can
+            combine analytical skills with relationship-building to help individuals
+            and communities make better financial decisions.
           </p>
           <Link
             href="/about"
@@ -49,19 +64,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects teaser */}
+      {/* Experience teaser */}
       <section className="border-t border-zinc-200 dark:border-zinc-800">
-        <div className="mx-auto max-w-3xl px-6 py-20">
-          <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
+        <div className="mx-auto max-w-4xl px-6 py-20">
+          <h2 className="text-2xl font-semibold tracking-tight">Experience</h2>
           <p className="mt-4 max-w-2xl leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Things you've built, designed, or contributed to. Add links and
-            short descriptions on the Projects page.
+            Real Estate PE Intern at Project Destined; Peer Advisor Team Lead and
+            Gies Ambassador at UIUC; consulting project with a real CPA firm through
+            BUS 301; and leadership roles across ALPFA, Chicago Scholars, Greenwood
+            Project, Management Leadership for Tomorrow, and America Needs You.
           </p>
           <Link
-            href="/projects"
+            href="/experience"
             className="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:no-underline"
           >
-            View projects →
+            View full experience →
+          </Link>
+        </div>
+      </section>
+
+      {/* Recognition teaser */}
+      <section className="border-t border-zinc-200 dark:border-zinc-800">
+        <div className="mx-auto max-w-4xl px-6 py-20">
+          <h2 className="text-2xl font-semibold tracking-tight">Recognition</h2>
+          <p className="mt-4 max-w-2xl leading-relaxed text-zinc-600 dark:text-zinc-400">
+            Gies Scholars, James Scholars, Jeffries Center Honors Recognition;
+            Honors Academic Excellence Award; CEO Program, ACE IT, FirstGenU Career
+            Institute; LeaderShape Institute alumnus; and top skills in Data Analysis,
+            Finance, and Strategic Communications.
+          </p>
+          <Link
+            href="/recognition"
+            className="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:no-underline"
+          >
+            Skills & awards →
           </Link>
         </div>
       </section>
@@ -71,48 +107,29 @@ export default function Home() {
         id="contact"
         className="border-t border-zinc-200 dark:border-zinc-800"
       >
-        <div className="mx-auto max-w-3xl px-6 py-20">
+        <div className="mx-auto max-w-4xl px-6 py-20">
           <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
           <p className="mt-4 max-w-2xl leading-relaxed text-zinc-600 dark:text-zinc-400">
-            The best way to reach me is by email or through the links below.
+            Open to internship opportunities, collaborations, and conversations about
+            finance, leadership, and career paths. Reach me by email or LinkedIn.
           </p>
           <ul className="mt-6 flex flex-wrap gap-6">
             <li>
               <a
-                href="mailto:you@example.com"
+                href="mailto:angelo032405@gmail.com"
                 className="font-medium text-foreground underline underline-offset-4 hover:no-underline"
               >
-                you@example.com
+                angelo032405@gmail.com
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-foreground underline underline-offset-4 hover:no-underline"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/angelo-perez-bg235"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-foreground underline underline-offset-4 hover:no-underline"
               >
                 LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-foreground underline underline-offset-4 hover:no-underline"
-              >
-                GitHub
               </a>
             </li>
           </ul>

@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Personal Website",
-  description: "Personal website and portfolio",
+  title: "Angelo Perez | Finance, Leadership & Advisory",
+  description:
+    "Finance student at UIUC (Gies Scholar) | Real Estate PE Intern @ Project Destined | Greenwood Project Scholar. Seeking Summer 2026 opportunities in wealth management, advisory & commercial banking.",
 };
 
 export default function RootLayout({
