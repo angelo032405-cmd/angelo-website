@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
 import "./globals.css";
-import { Nav } from "./components/Nav";
+
+const greatVibes = Great_Vibes({
+  weight: "400",
+  variable: "--font-signature",
+  subsets: ["latin"],
+});
+import { ChapterNav } from "./components/ChapterNav";
+import { Footer } from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +21,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Angelo Perez | Finance, Leadership & Advisory",
+  title: {
+    default: "Angelo Perez | Finance, Leadership & Cultural Advocacy",
+    template: "%s | Angelo Perez",
+  },
   description:
-    "Finance student at UIUC (Gies Scholar) | Real Estate PE Intern @ Project Destined | Greenwood Project Scholar. Seeking Summer 2026 opportunities in wealth management, advisory & commercial banking.",
+    "Finance student at UIUC (Gies Scholar) | Real Estate PE Intern @ Project Destined | Greenwood Project Scholar. Leadership, entrepreneurship, and advocacy for Latino representation in finance.",
+  openGraph: {
+    type: "website",
+  },
+  metadataBase: new URL("https://angelo-website-nine.vercel.app"),
 };
 
 export default function RootLayout({
@@ -27,10 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} font-sans antialiased bg-background text-foreground min-h-screen`}
       >
-        <Nav />
-        {children}
+        <ChapterNav />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
